@@ -1,7 +1,5 @@
 package io.github.sgtswagrid.euler
 
-import library.{IO, Memo}
-
 /** https://projecteuler.net/problem=67 */
 object Problem0067:
 
