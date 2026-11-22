@@ -1,16 +1,19 @@
 import IdeSettings.packagePrefix
 
-scalaVersion := "3.8.3"
+scalaVersion := "3.10.1"
 
 scalacOptions ++= Seq(
   "-explain",
   "-explain-types",
   "-explain-cyclic",
+
+  // Enable new experimental features:
   "-language:experimental.subCases",
-  "-language:experimental.relaxedLambdaSyntax",
   "-language:experimental.multiSpreads",
-  "-language:experimental.strictEqualityPatternMatching",
   "-language:experimental.erasedDefinitions",
+
+  // Enable preview features, such as relaxed lambda syntax:
+  "-preview",
 )
 
 lazy val `project-euler` = project.in(file(".")).settings(
